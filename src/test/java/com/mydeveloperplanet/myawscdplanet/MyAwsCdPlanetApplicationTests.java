@@ -21,7 +21,7 @@ class MyAwsCdPlanetApplicationTests {
 
     @Test
     void verifyHelloMessage() throws Exception {
-        String patternString = "(Hello AWS Continuous Delivery with Notifications! From host: ).*\\/\\d+.\\d+.\\d+.\\d+";
+        String patternString = "(Hello again AWS Continuous Delivery with Notifications! From host: ).*\\/\\d+.\\d+.\\d+.\\d+";
         Matcher<String> regexMatcher = Matchers.matchesRegex(patternString);
 
         this.mockMvc.perform(get("/hello")).andExpect(status().isOk())
